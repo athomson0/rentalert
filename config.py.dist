@@ -1,0 +1,9 @@
+# Who should notifications go to?
+RECIPIENT=''
+
+# SMTP server to use
+SMTP_SERVER='smtp.gmail.com'
+
+# Using Gmail's SMTP server
+EMAIL_USERNAME=''
+EMAIL_PASSWORD=''
