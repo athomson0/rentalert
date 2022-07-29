@@ -3,6 +3,7 @@ RECIPIENT=''
 
 # SMTP server to use
 SMTP_SERVER='smtp.gmail.com'
+SMTP_PORT=597
 
 # Using Gmail's SMTP server
 EMAIL_USERNAME=''
