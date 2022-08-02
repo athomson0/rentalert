@@ -13,7 +13,7 @@ PRICE_MIN           = '400'
 PRICE_MAX           = '700'
 SEARCH_RADIUS       = '0'
 SEARCH_QUERY        = 'Falkirk'
-EXCLUDE_LOCATIONS   = ['Denny', "Bo'ness"]
+EXCLUDE_LOCATIONS   = ['Denny', "Bo'ness", "Bonnybridge", "Larbert", "Stenhousemuir"]
 
 AGGREGATORS = {
     'Zoopla': {
