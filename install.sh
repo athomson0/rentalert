@@ -10,6 +10,6 @@ sed -i "s/EMAIL_USERNAME=''/EMAIL_USERNAME='$GMAIL_USERNAME'/" config.py.dist
 sed -i "s/EMAIL_PASSWORD=''/EMAIL_PASSWORD='$GMAIL_PASSWORD'/" config.py.dist
 mv config.py.dist config.py
 
-crontab -l | { cat; echo "*/10 * * * * python3 $PWD/__main__.py"; } | crontab -
+crontab -l | { cat; echo "*/10 * * * * python3 $PWD/__main__.py 2>$PWD/error.log"; } | crontab -
 
 echo "Cronjob set up. Please run: python3 $PWD/__main__.py once manually to ensure that the script works properly."
