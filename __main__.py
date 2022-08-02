@@ -156,13 +156,14 @@ def parse(response, config, agg_name):
     all_properties = re.findall(config['expr_property'], response)
     
     for prop in all_properties:
-        location = normalise_location(extract_regex(config['expr_location'], prop))
+        location = extract_regex(config['expr_location'], prop)
+        if is_excluded_location(location):
+            continue
+
+        location = normalise_location(location)
         bedrooms = extract_regex(config['expr_bedrooms'], prop)
         price = extract_regex(config['expr_price'], prop)
         url = extract_regex(config['expr_details_url'], prop)
-        
-        if is_excluded_location(location):
-            continue
         
         properties.append(Property(
             aggregator=agg_name,
